@@ -190,3 +190,20 @@ select {
   background-color: #0453a1;
   color: white;
 }
+.form{
+  width: 100%;
+}
+.form-container{
+  padding:0;
+  list-style-type: none;
+
+}
+li{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+input{
+  padding: 1rem;
+  border: 1px #c0c0c0 solid;
+}
