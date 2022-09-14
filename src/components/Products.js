@@ -1,20 +1,20 @@
 import React from "react";
 import formatCurrency from "../utils";
 
-const Products = ({ Product }) => {
+const Products = ({product,addToCart }) => {
   return (
     <div>
       <ul className="products">
-        {Product.map((Product) => (
-          <li kye={Product.id}>
+        {product.map((product) => (
+          <li key={product.id}>
             <div className="product">
-              <a href="#">
-                <img src={Product.thumbnail} alt="" />
-                <p>{Product.title}</p>
+              <a href={"#"+product.id}>
+                <img src={product.thumbnail} alt="" />
+                <p>{product.title}</p>
               </a>
             </div>
-            <div className="product-price">{formatCurrency(Product.price)}</div>
-            <button className="button primary">Add to Cart</button>
+            <div className="product-price">{formatCurrency(product.price)}</div>
+            <button className="button primary" onClick ={()=>{addToCart(product)}}>Add to Cart</button>
           </li>
         ))}
       </ul>
